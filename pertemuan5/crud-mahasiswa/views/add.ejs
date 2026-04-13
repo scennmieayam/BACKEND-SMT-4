@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tambah Data Mahasiswa</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body class="container mt-5">
+
+  <h2 class="mb-4 text-center">Tambah Data Mahasiswa</h2>
+
+  <form action="/add" method="POST">
+
+    <div class="form-group">
+      <label>Nama</label>
+      <input type="text" name="nama" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label>NIM</label>
+      <input type="number" name="nim" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label>Jurusan</label>
+      <input type="text" name="jurusan" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label>Alamat</label>
+      <input type="text" name="alamat" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Simpan</button>
+    <a href="/" class="btn btn-secondary">Kembali</a>
+
+  </form>
+
+</body>
+</html>
