@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit Data Mahasiswa</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body class="container mt-5">
+
+  <h2 class="mb-4 text-center">Edit Data Mahasiswa</h2>
+
+  <form action="/edit/<%= mahasiswa._id %>" method="POST">
+
+    <div class="form-group">
+      <label>Nama</label>
+      <input type="text" name="nama" class="form-control" value="<%= mahasiswa.nama %>" required>
+    </div>
+
+    <div class="form-group">
+      <label>NIM</label>
+      <input type="number" name="nim" class="form-control" value="<%= mahasiswa.nim %>" required>
+    </div>
+
+    <div class="form-group">
+      <label>Jurusan</label>
+      <input type="text" name="jurusan" class="form-control" value="<%= mahasiswa.jurusan %>" required>
+    </div>
+
+    <div class="form-group">
+      <label>Alamat</label>
+      <input type="text" name="alamat" class="form-control" value="<%= mahasiswa.alamat %>" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+    <a href="/" class="btn btn-secondary">Kembali</a>
+
+  </form>
+
+</body>
+</html>

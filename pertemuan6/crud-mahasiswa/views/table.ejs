@@ -1,0 +1,45 @@
+<!--DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <a href="/add" class="btn btn-outline-primary btn-sm">
+            Add
+        </a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Jurusan</th>
+                        <th>Alamat</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (mahasiswa && mahasiswa.length > 0) { %>
+                        <% mahasiswa.forEach((m, index) => { %>
+                            <tr>
+                                <td><%= index + 1 %></td>
+                                <td><%= m.nama %></td>
+                                <td><%= m.nim %></td>
+                                <td><%= m.jurusan %></td>
+                                <td><%= m.alamat %></td>
+                                <td class="text-center">
+                                    <a href="/edit/<%= m._id %>" class="btn btn-outline-warning btn-sm button-update">Edit</a>
+                                    <a href="/delete/<%= m._id %>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Delete</a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="6" class="text-center">Tidak ada data</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
